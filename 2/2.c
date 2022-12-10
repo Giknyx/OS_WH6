@@ -41,8 +41,9 @@ int main(int argc[], char *argv[])
 
     
     if (pid1 > 0){
-        int status;
-        wait(&status);
         system("ps -x");
+        for (int i = 0; i < 2; ++i) {
+            wait(NULL);
+        }
     }
 }
